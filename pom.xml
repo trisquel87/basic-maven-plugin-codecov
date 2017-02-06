@@ -26,10 +26,10 @@
 			<plugin>
 				<groupId>com.e-gineering</groupId>
 				<artifactId>gitflow-helper-maven-plugin</artifactId>
-				<version>1.5.2</version>
+				<version>1.6</version>
 				<configuration>
-					<releaseDeploymentRepository>releases::default::http://domoartifactory:19008/artifactory/plugins-release-local::false</releaseDeploymentRepository>
-					<stageDeploymentRepository>stage::default::http://domoartifactory:19008/artifactory/plugins-snapshot-local::false</stageDeploymentRepository>
+					<releaseDeploymentRepository>central::default::http://domoartifactory:19008/artifactory/plugins-release-local::true</releaseDeploymentRepository>
+					<stageDeploymentRepository>snapshots::default::http://domoartifactory:19008/artifactory/plugins-snapshot-local::false</stageDeploymentRepository>
 					<snapshotDeploymentRepository>snapshots::default::http://domoartifactory:19008/artifactory/plugins-snapshot-local::true</snapshotDeploymentRepository>
 				</configuration>
 				<executions>
@@ -37,6 +37,7 @@
 						<goals>
 						    <goal>enforce-versions</goal>
 							<goal>retarget-deploy</goal>
+							<goal>promote-master</goal>
 						</goals>
 					</execution>
 				</executions>

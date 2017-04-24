@@ -4,7 +4,7 @@
   <groupId>com.trisquel87</groupId>
   <artifactId>basic-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>2.0</version>
+  <version>1.0.0</version>
   <name>basic-maven-plugin Maven Mojo</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -24,26 +24,18 @@
   	<pluginManagement>
   		<plugins>
 			<plugin>
-				<groupId>com.e-gineering</groupId>
-				<artifactId>gitflow-helper-maven-plugin</artifactId>
-				<version>1.6</version>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
 				<configuration>
-					<releaseDeploymentRepository>central::default::http://domoartifactory:19008/artifactory/plugins-release-local::true</releaseDeploymentRepository>
-					<stageDeploymentRepository>snapshots::default::http://domoartifactory:19008/artifactory/plugins-snapshot-local::false</stageDeploymentRepository>
-					<snapshotDeploymentRepository>snapshots::default::http://domoartifactory:19008/artifactory/plugins-snapshot-local::true</snapshotDeploymentRepository>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-						    <goal>enforce-versions</goal>
-							<goal>retarget-deploy</goal>
-							<goal>promote-master</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
   		</plugins>
   	</pluginManagement>
   </build>
-	
 </project>

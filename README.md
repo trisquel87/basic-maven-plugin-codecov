@@ -19,6 +19,12 @@ Type this command in your project folder:
 mvn com.trisquel87:basic-maven-plugin:printMessage
 ```
 
+If you want to launch the Codecov plugin, type this command:
+
+```sh
+mvn cobertura:cobertura
+```
+
 **Result:**
 
 ```sh

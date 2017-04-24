@@ -1,5 +1,5 @@
 # basic-maven-plugin
-An example of a basic Maven plugin.
+An example of a basic Maven plugin with Codecov integration.
 
 Installation
 ----
@@ -17,6 +17,12 @@ Type this command in your project folder:
 
 ```sh
 mvn com.trisquel87:basic-maven-plugin:printMessage
+```
+
+If you want to launch the Codecov plugin, type this command:
+
+```sh
+mvn cobertura:cobertura
 ```
 
 **Result:**

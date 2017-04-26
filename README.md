@@ -25,7 +25,7 @@ If you want to launch the Codecov plugin, type this command:
 mvn cobertura:cobertura
 ```
 
-Finally, type this command at the end of your CI build:
+Finally, launch this command at the end of your CI build:
 
 ```sh
 bash <(curl -s https://codecov.io/bash)
